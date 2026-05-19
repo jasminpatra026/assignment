@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+    <title>Feedback Form</title>
+
+    <style>
+        *{
+            margin:0;
+            padding:0;
+            box-sizing:border-box;
+            font-family:Arial, sans-serif;
+        }
+
+        body{
+            height:100vh;
+            display:flex;
+            justify-content:center;
+            align-items:center;
+            background:#b8c6f0;
+        }
+
+        .container{
+            width:400px;
+            background:#d9def3;
+            padding:30px;
+            border-radius:20px;
+            text-align:center;
+            box-shadow:0 8px 20px rgba(0,0,0,0.2);
+        }
+
+        h1{
+            margin-bottom:20px;
+            color:#000;
+        }
+
+        p{
+            color:#555;
+            line-height:1.5;
+            margin-bottom:20px;
+        }
+
+        .stars{
+            font-size:40px;
+            color:gold; 
+            display: flex;
+            justify-content: center;
+            gap: 20px;
+        }
+        .white{
+            color: white;
+        } 
+        textarea{
+            width:100%;
+            height:120px;
+            border:none;
+            border-radius:15px;
+            padding:15px;
+            font-size:18px;
+            outline:none;
+            resize:none;
+            box-shadow: inset 2px 2px 5px rgba(0,0,0,0.1);
+        }
+
+        button{
+            margin-top:25px;
+            padding:12px 40px;
+            border-radius:30px;
+            background:#f5cf58;
+            font-size:22px;
+            cursor:pointer;
+            box-shadow:0 4px 10px rgba(0,0,0,0.2);
+        }
+
+        button:hover{
+            background:#f2c93d;
+        }
+    </style>
+</head>
+
+<body>
+
+    <div class="container">
+
+        <h1>Rate your experience</h1>
+
+        <p>
+            We highly value your feedback! Kindly take a
+            moment to rate your experience and provide us
+            with your valuable feedback.
+        </p>
+
+        <div class="stars">
+                ★  ★  ★  ★ 
+            <div class="white">
+                ★
+            </div>
+        </div>
+
+        <textarea placeholder="Tell us about your experience!"></textarea>
+
+        <br>
+
+        <button>Send</button>
+
+    </div>
+
+</body>
+</html>
