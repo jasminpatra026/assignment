@@ -1,0 +1,213 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Responsive Web Design</title>
+
+  <style>
+    *{
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+      font-family: Arial, sans-serif;
+    }
+
+    body{
+      background-color: #031133;
+      color: white;
+    }
+
+    .container{
+      width: 100%;
+      min-height: 100vh;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 60px 8%;
+      gap: 40px;
+      flex-wrap: wrap;
+    }
+
+    /* LEFT SIDE */
+
+    .left{
+      flex: 1;
+      min-width: 300px;
+    }
+
+    .left h1{
+      font-size: 80px;
+      line-height: 90px;
+      margin-bottom: 30px;
+    }
+
+    .left p{
+      font-size: 22px;
+      color: #d3d3d3;
+      line-height: 35px;
+      margin-bottom: 35px;
+      max-width: 650px;
+    }
+
+    .buttons{
+      display: flex;
+      gap: 20px;
+      flex-wrap: wrap;
+    }
+
+    .btn1,
+    .btn2{
+      padding: 18px 40px;
+      font-size: 20px;
+      border-radius: 15px;
+      cursor: pointer;
+      transition: 0.3s;
+    }
+
+    /* .btn1{
+      background: #2f6df6;
+      border: none;
+      color: white;
+    } */
+
+    .btn1,.btn2{
+      background: transparent;
+      border: 2px solid white;
+      color: white;
+    }
+
+    .btn1:hover,.btn2:hover{
+      background: #1f58d8;
+    }
+
+
+    /* RIGHT SIDE */
+
+    .right{
+      flex: 1;
+      min-width: 300px;
+
+      display: grid;
+      /* grid-template-columns: repeat(2, 1fr); */
+      gap: 25px;
+      justify-content: center;
+    }
+
+    .box{
+      height: 220px;
+      background: #1b2946;
+      border-radius: 25px;
+
+      display: flex;
+      justify-content: center;
+      align-items: center;
+
+      font-size: 38px;
+      font-weight: bold;
+    }
+
+    .box:hover{
+      background: #2f6df6;
+    }
+
+    /* ============ RESPONSIVE ============ */
+
+    @media(max-width: 992px){
+
+      .container{
+        flex-direction: column;
+        text-align: center;
+      }
+
+      .left h1{
+        font-size: 60px;
+        line-height: 70px;
+      }
+
+      .left p{
+        margin: auto;
+        margin-bottom: 30px;
+      }
+
+      .buttons{
+        justify-content: center;
+      }
+
+      .right{
+        width: 100%;
+      }
+    }
+
+    @media(max-width: 600px){
+
+      .left h1{
+        font-size: 45px;
+        line-height: 55px;
+      }
+
+      .left p{
+        font-size: 18px;
+        line-height: 30px;
+      }
+
+      .right{
+        grid-template-columns: 1fr;
+      }
+
+      .box{
+        height: 180px;
+        font-size: 30px;
+      }
+
+      .btn1,
+      .btn2{
+        width: 100%;
+      }
+    }
+
+  </style>
+</head>
+<body>
+
+  <div class="container">
+
+    <!-- LEFT SECTION -->
+
+    <div class="left">
+      <h1>
+        Learn <br>
+        Responsive <br>
+        Web Design
+      </h1>
+
+      <p>
+        This section automatically changes layout on mobile,
+        tablet, and desktop using Flexbox, Flex Wrap,
+        and Media Queries.
+      </p>
+
+      <div class="buttons">
+        <button class="btn1">Explore</button>
+        <button class="btn2">Learn More</button>
+      </div>
+    </div>
+
+    <!-- RIGHT SECTION -->
+
+    <div class="right">
+
+      <div class="box">HTML</div>
+
+      <div class="box">CSS</div>
+
+      <div class="box">Flexbox</div>
+
+      <div class="box">Media Query</div>
+
+    </div>
+
+  </div>
+
+</body>
+</html>
